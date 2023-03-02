@@ -27,6 +27,7 @@ def main():
     s1 = "ababcbacadefegdehijhklij"
     assert partitionLabels(s1) == [9, 7, 8], "Test 1 failed!"
 
+    # Case 2
     s2 = "eccbbbbdec"
     assert partitionLabels(s2) == [10], "Test 2 failed!"
 
