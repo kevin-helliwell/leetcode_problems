@@ -1,6 +1,9 @@
-# You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part.
+# You are given a string s.
+# We want to partition the string into as many parts as possible.
+# Such that each letter appears in at most one part.
 
-# Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+# Note that the partitioning is done such that the following is true:
+# After concatenating all the parts in order, the resultant string should be s.
 
 # Return a list of integers representing the size of these parts.
 
@@ -15,7 +18,7 @@ def partitionLabels(s: str) -> list[int]:
         size += 1
         # if lastIndex[c] > end:
         # end = lastIndex[c]
-        end = max(end, lastIndex[c])  # one-liner, same as 10-11
+        end = max(end, lastIndex[c])  # one-liner, equivalent to two lines above
         if i == end:
             result.append(size)  # adds partition size to result []
             size = 0  # resets size
